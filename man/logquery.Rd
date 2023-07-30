@@ -18,5 +18,5 @@ logquery(token, fnumber)
 日志查询
 }
 \examples{
-mdlogquerybyno('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','NZ0101')
+logquery('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','NZ0101')
 }

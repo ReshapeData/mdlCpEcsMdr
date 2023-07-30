@@ -358,14 +358,15 @@ supplierStatusupload <- function(token,fnumber){
 #' @param fnumber 单据编号
 #' @return 返回值
 #' @export
-#' @examples mdlogquerybyno('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','NZ0101')
+#' @examples logquery('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','NZ0101')
 logquery <- function(token,fnumber){
 
-  ecsmd<-tsda::import('mdlCpEcsMdpy')
+  ecsmd<-tsda::import('mdlCpEcsMdpy.main')
 
   res<-ecsmd$log_query(token,fnumber)
 
   return(res)
 
 }
+
 
