@@ -20,5 +20,5 @@ materialErpDataByFNumber_query(token, FNumber, FName)
 按编号查询
 }
 \examples{
-materialErpDataByFNumber_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,1.1.1.01.01.001.000007,赛普集团新账套)
+materialErpDataByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','1.1.1.01.01.001.000007','赛普集团新账套')
 }

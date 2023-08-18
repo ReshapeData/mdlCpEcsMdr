@@ -19,6 +19,3 @@ customerByFNumber_sync(token, FNumber, FName)
 \description{
 按单号同步
 }
-\examples{
-customerByFNumber_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,C15276,赛普集团新账套)
-}

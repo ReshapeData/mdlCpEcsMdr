@@ -20,5 +20,5 @@ supplierByFNumber_sync(token, FNumber, FName)
 按单号同步
 }
 \examples{
-supplierByFNumber_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S00085,赛普集团新账套)
+supplierByFNumber_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','S00085','赛普集团新账套')
 }

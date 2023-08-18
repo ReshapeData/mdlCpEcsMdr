@@ -18,5 +18,5 @@ customerByDate_query(token, FDate)
 按日期查询
 }
 \examples{
-customerByDate_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,2023-07-03)
+customerByDate_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2023-07-03')
 }

@@ -19,6 +19,3 @@ supplierStatus_upload(token, FNumber, FName)
 \description{
 修改数据状态
 }
-\examples{
-supplierStatus_upload(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S00085,赛普集团新账套)
-}
