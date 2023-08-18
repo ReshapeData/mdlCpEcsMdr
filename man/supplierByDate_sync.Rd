@@ -20,5 +20,5 @@ supplierByDate_sync(token, FDate, FName)
 按日期同步
 }
 \examples{
-supplierByDate_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3',2023-02-06,'赛普集团新账套')
+supplierByDate_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2022-12-01','赛普集团新账套')
 }

@@ -18,5 +18,5 @@ supplierLog_query(token, FNumber)
 日志同步
 }
 \examples{
-supplierLog_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','S00085')
+supplierLog_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276')
 }

@@ -18,5 +18,5 @@ materialByFNumber_query(token, FNumber)
 按单据编号查询
 }
 \examples{
-materialByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','K86-10015S-H')
+materialByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276')
 }
