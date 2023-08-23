@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' materialByFNumber_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,K86-10015S-H,赛普集团新账套)
+#' materialByFNumber_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,'C15276','赛普集团新账套')
 materialByFNumber_sync<- function(token,FNumber,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -30,7 +30,7 @@ materialByFNumber_sync<- function(token,FNumber,FName){
 #' @export
 #'
 #' @examples
-#' materialByDate_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,2023-07-06,赛普集团新账套)
+#' materialByDate_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2022-12-01','赛普集团新账套')
 materialByDate_sync<- function(token,FDate,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -50,7 +50,7 @@ materialByDate_sync<- function(token,FDate,FName){
 #' @export
 #'
 #' @examples
-#' materialByFNumber_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,K86-10015S-H)
+#' materialByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276')
 materialByFNumber_query<- function(token,FNumber){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -77,7 +77,7 @@ materialByFNumber_query<- function(token,FNumber){
 #' @export
 #'
 #' @examples
-#' materialByDate_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,2023-07-06)
+#' materialByDate_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2023-07-03')
 materialByDate_query<- function(token,FDate){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -99,14 +99,18 @@ materialByDate_query<- function(token,FDate){
 #' @export
 #'
 #' @examples
-#' materialErpDataByFNumber_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,1.1.1.01.01.001.000007,赛普集团新账套)
+#' materialErpDataByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C000186','赛普集团新账套')
 materialErpDataByFNumber_query<- function(token,FNumber,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
 
   res <- mdl$materialErpDataByFNumber_query(token,FNumber,FName)
+  #转换成dataframe
+  res <- data.frame(res,stringsAsFactors = FALSE)
+  names(res) <- '查询结果'
   #返回结果
   return(res)
+
 
 }
 
@@ -122,7 +126,7 @@ materialErpDataByFNumber_query<- function(token,FNumber,FName){
 #' @export
 #'
 #' @examples
-#' materialStatus_upload(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,K86-10015S-H,赛普集团新账套)
+#' materialStatus_upload('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276','赛普集团新账套')
 materialStatus_upload<- function(token,FNumber,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -145,7 +149,7 @@ materialStatus_upload<- function(token,FNumber,FName){
 #' @export
 #'
 #' @examples
-#' materialLog_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,K86-10015S-H)
+#' materialLog_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276')
 materialLog_query<- function(token,FNumber){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')

@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' supplierByFNumber_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S00085,赛普集团新账套)
+#' supplierByFNumber_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,'C15276','赛普集团新账套')
 supplierByFNumber_sync<- function(token,FNumber,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -30,7 +30,7 @@ supplierByFNumber_sync<- function(token,FNumber,FName){
 #' @export
 #'
 #' @examples
-#' supplierByDate_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,2023-02-06,赛普集团新账套)
+#' supplierByDate_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2022-12-01','赛普集团新账套')
 supplierByDate_sync<- function(token,FDate,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -50,7 +50,7 @@ supplierByDate_sync<- function(token,FDate,FName){
 #' @export
 #'
 #' @examples
-#' supplierByFNumber_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S00030)
+#' supplierByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276')
 supplierByFNumber_query<- function(token,FNumber){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -77,7 +77,7 @@ supplierByFNumber_query<- function(token,FNumber){
 #' @export
 #'
 #' @examples
-#' supplierByDate_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,2023-07-04)
+#' supplierByDate_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2023-07-03')
 supplierByDate_query<- function(token,FDate){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -99,14 +99,18 @@ supplierByDate_query<- function(token,FDate){
 #' @export
 #'
 #' @examples
-#' supplierErpDataByFNumber_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S001162,赛普集团新账套)
+#' supplierErpDataByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C000186','赛普集团新账套')
 supplierErpDataByFNumber_query<- function(token,FNumber,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
 
   res <- mdl$supplierErpDataByFNumber_query(token,FNumber,FName)
+  #转换成dataframe
+  res <- data.frame(res,stringsAsFactors = FALSE)
+  names(res) <- '查询结果'
   #返回结果
   return(res)
+
 
 }
 
@@ -122,7 +126,7 @@ supplierErpDataByFNumber_query<- function(token,FNumber,FName){
 #' @export
 #'
 #' @examples
-#' supplierStatus_upload(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S00085,赛普集团新账套)
+#' supplierStatus_upload('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276','赛普集团新账套')
 supplierStatus_upload<- function(token,FNumber,FName){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')
@@ -145,7 +149,7 @@ supplierStatus_upload<- function(token,FNumber,FName){
 #' @export
 #'
 #' @examples
-#' supplierLog_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,S00085)
+#' supplierLog_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C15276')
 supplierLog_query<- function(token,FNumber){
   #注册python模板
   mdl <- tsda::import('mdlCpEcsMdpy.main')

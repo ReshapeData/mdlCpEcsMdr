@@ -20,5 +20,5 @@ customerByDate_sync(token, FDate, FName)
 按日期同步
 }
 \examples{
-customerByDate_sync(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,2022-12-01,赛普集团新账套)
+customerByDate_sync('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','2022-12-01','赛普集团新账套')
 }

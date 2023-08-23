@@ -20,5 +20,5 @@ customerErpDataByFNumber_query(token, FNumber, FName)
 按编号查询
 }
 \examples{
-customerErpDataByFNumber_query(9B6F803F-9D37-41A2-BDA0-70A7179AF0F3,C000186,赛普集团新账套)
+customerErpDataByFNumber_query('9B6F803F-9D37-41A2-BDA0-70A7179AF0F3','C000186','赛普集团新账套')
 }
